@@ -147,7 +147,7 @@
             html = [];
 
         html.push(sprintf('<button class="%s dropdown-toggle" type="button" data-toggle="dropdown">',
-            that.options.defaultClass),
+            that.options.value ? that.options.primaryClass : that.options.defaultClass),
             sprintf('<span class="value">%s</span> <span class="caret"></span>',
                 calculateObjectValue(that.options, that.options.formatter,
                 [this.options.value], this.options.value)),
@@ -165,6 +165,9 @@
 
         this.$el.find('li').off('click').on('click', function () {
             that.options.value = $(this).data('value');
+
+            that.$el.find('button.dropdown-toggle').attr('class', sprintf('%s dropdown-toggle',
+                that.options.value ? that.options.primaryClass : that.options.defaultClass));
 
             that.$el.find('.value').text(calculateObjectValue(that.options,
                 that.options.formatter, [that.options.value], that.options.value));
@@ -205,6 +208,14 @@
         this.initData();
     };
 
+    GroupSelect.prototype.enable = function () {
+        this.$el.find('button').prop('disabled', false);
+    };
+
+    GroupSelect.prototype.disable = function () {
+        this.$el.find('button').prop('disabled', true);
+    };
+
     GroupSelect.prototype.trigger = function (name) {
         var args = Array.prototype.slice.call(arguments, 1);
 
@@ -225,7 +236,8 @@
             value,
             allowedMethods = [
                 'getValue', 'setValue',
-                'getData', 'setData'
+                'getData', 'setData',
+                'enable', 'disable'
             ]; // public function
 
         this.each(function() {
