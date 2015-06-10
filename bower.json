@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap-group-select",
+  "version": "1.0.0",
+  "homepage": "https://github.com/wenzhixin/bootstrap-group-select",
+  "authors": [
+    "zhixin <wenzhixin2010@gmail.com>"
+  ],
+  "description": "Bootstrap Group Select",
+  "main": "src/bootstrap-group-select.js",
+  "keywords": [
+    "bootstrap",
+    "group",
+    "button",
+    "dropdown",
+    "select"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
