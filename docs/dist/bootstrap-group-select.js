@@ -1,7 +1,7 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-group-select
- * version: 1.0.1
+ * version: 1.0.0
  */
 
 !function ($) {
