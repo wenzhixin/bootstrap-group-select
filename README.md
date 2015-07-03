@@ -20,12 +20,6 @@ Use [Releases page](https://github.com/wenzhixin/bootstrap-group-select/releases
 bower install bootstrap-group-select
 ```
 
-### Npm
-
-```
-npm install bootstrap-group-select
-```
-
 ## Reporting issues
 
 Please provide jsFiddle when creating issues!
