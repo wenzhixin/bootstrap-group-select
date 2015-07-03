@@ -103,7 +103,7 @@
             data = this.options.data;
 
         if (typeof data === 'string') {
-            data = data.replace('[', '').replace(']', '').replace(/ /g, '').split(',');
+            data = data.replace('[', '').replace(']', '').replace(/, /g, ',').split(',');
         }
 
         if ($.inArray(that.options.value, data) === -1) {
@@ -169,7 +169,7 @@
             that.$el.find('button.dropdown-toggle').attr('class', sprintf('%s dropdown-toggle',
                 that.options.value ? that.options.primaryClass : that.options.defaultClass));
 
-            that.$el.find('.value').text(calculateObjectValue(that.options,
+            that.$el.find('.value').html(calculateObjectValue(that.options,
                 that.options.formatter, [that.options.value], that.options.value));
 
             $(this).addClass('active')
@@ -190,7 +190,7 @@
                 .attr('class', this.options.primaryClass)
                 .siblings().attr('class', this.options.defaultClass);
         } else {
-            this.$el.find('button span.value').text(calculateObjectValue(
+            this.$el.find('button span.value').html(calculateObjectValue(
                 this.options, this.options.formatter,
                 [this.options.value], this.options.value));
             this.$el.find(sprintf('li[data-value="%s"]', value))
