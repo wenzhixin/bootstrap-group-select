@@ -21,7 +21,11 @@
 
 <script>
 function starFormatter(value) {
-     var name = ['Bootstrap Table', 'Multiple Select', 'Bootstrap Show Password', 'Bootstrap Group Select'][value]
+     var name = [
+          'Bootstrap Table', 'Multiple Select', 
+          'Bootstrap Show Password', 'Bootstrap Group Select'
+     ][value];
+
      return '<i class="glyphicon glyphicon-star"></i> ' + name;
 }
 </script>
@@ -39,8 +43,9 @@ function starFormatter(value) {
         var name = [
             'Bootstrap Table', 'Multiple Select',
             'Bootstrap Show Password', 'Bootstrap Group Select'
-        ][value]
-             return '<i class="glyphicon glyphicon-star"></i> ' + name;
+        ][value];
+
+        return '<i class="glyphicon glyphicon-star"></i> ' + name;
     }
 </script>
 ```
