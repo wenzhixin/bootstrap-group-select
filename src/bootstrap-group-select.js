@@ -159,7 +159,7 @@
             var data = value.split('|');
             if (data.length > 1) {
                 switch(data[1].toLowerCase()) {
-                    case 'separator':
+                    case 'divider':
                         html.push('<li role="separator" class="divider"></li>');
                         break;
                     case 'header':
