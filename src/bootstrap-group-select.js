@@ -155,9 +155,24 @@
             '<ul class="dropdown-menu" role="menu">');
 
         $.each(data, function (i, value) {
-            html.push(sprintf('<li data-value="%s" class="%s"><a href="javascript:void(0)">%s</a></li>',
-                value, that.options.value === value ? 'active' : '',
-                calculateObjectValue(that.options, that.options.formatter, [value], value)));
+            // add separator and header options
+            var data = value.split('|');
+            if (data.length > 1) {
+                switch(data[1].toLowerCase()) {
+                    case 'divider':
+                        html.push('<li role="separator" class="divider"></li>');
+                        break;
+                    case 'header':
+                        html.push(sprintf('<li class="dropdown-header">%s</li>', data[0]));
+                        break;
+                }
+            }
+            else {
+                value = data[0];
+                html.push(sprintf('<li data-value="%s" class="%s"><a href="javascript:void(0)">%s</a></li>',
+                    value, that.options.value === value ? 'active' : '',
+                    calculateObjectValue(that.options, that.options.formatter, [value], value)));
+            }
         });
 
         html.push('</ul>');
