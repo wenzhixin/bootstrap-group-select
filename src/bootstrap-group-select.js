@@ -71,7 +71,7 @@
     };
 
     GroupSelect.DEFAULTS = {
-        type: 'button', // button, dropdown
+        type: 'dropdown', // button, dropdown
         value: undefined,
         data: [],
         defaultClass: 'btn btn-default',
@@ -147,7 +147,7 @@
             html = [];
 
         html.push(sprintf('<button class="%s dropdown-toggle" type="button" data-toggle="dropdown">',
-            that.options.value ? that.options.primaryClass : that.options.defaultClass),
+                that.options.defaultClass),
             sprintf('<span class="value">%s</span> <span class="caret"></span>',
                 calculateObjectValue(that.options, that.options.formatter,
                 [this.options.value], this.options.value)),
@@ -180,9 +180,6 @@
 
         this.$el.find('li').off('click').on('click', function () {
             that.options.value = $(this).data('value');
-
-            that.$el.find('button.dropdown-toggle').attr('class', sprintf('%s dropdown-toggle',
-                that.options.value ? that.options.primaryClass : that.options.defaultClass));
 
             that.$el.find('.value').html(calculateObjectValue(that.options,
                 that.options.formatter, [that.options.value], that.options.value));
