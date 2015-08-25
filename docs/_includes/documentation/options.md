@@ -1,4 +1,4 @@
-# Options []({{ site.repo }}/blob/master/docs/_include/documentation/options.md)
+# Options []({{ site.repo }}/blob/master/docs/_includes/documentation/options.md)
 
 ---
 
@@ -31,7 +31,7 @@ The options are defined in `jQuery.fn.groupSelect.defaults`.
         <td>type</td>
         <td>data-type</td>
         <td>String</td>
-        <td>'button'</td>
+        <td>'dropdown'</td>
         <td>Defines the type of group select, can only be 'button' or 'dropdown'.</td>
     </tr>
     <tr>

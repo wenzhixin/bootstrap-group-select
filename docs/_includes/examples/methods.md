@@ -1,4 +1,4 @@
-# Methods []({{ site.repo }}/blob/master/docs/_includes/examples/methods.md)
+# Methods []({{ site.repo }}/blob/master/docs/_includess/examples/methods.md)
 
 <div id="methods1"
      data-toggle="group-select"

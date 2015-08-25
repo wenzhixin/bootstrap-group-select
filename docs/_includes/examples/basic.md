@@ -1,4 +1,4 @@
-# Basic []({{ site.repo }}/blob/master/docs/_includes/examples/button.md)
+# Basic []({{ site.repo }}/blob/master/docs/_includess/examples/button.md)
 
 <div data-toggle="group-select"
      data-data="Bootstrap Table, Multiple Select, Bootstrap Show Password, Bootstrap Group Select"

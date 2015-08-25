@@ -1,4 +1,4 @@
-# Formatter []({{ site.repo }}/blob/master/docs/_includes/examples/formatter.md)
+# Formatter []({{ site.repo }}/blob/master/docs/_includess/examples/formatter.md)
 
 <div data-toggle="group-select"
      data-data="Bootstrap Table, Multiple Select, Bootstrap Show Password, Bootstrap Group Select"

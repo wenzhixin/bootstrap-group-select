@@ -1,4 +1,4 @@
-# Style []({{ site.repo }}/blob/master/docs/_includes/examples/style.md)
+# Style []({{ site.repo }}/blob/master/docs/_includess/examples/style.md)
 
 <div data-toggle="group-select"
      data-default-class="btn btn-info"

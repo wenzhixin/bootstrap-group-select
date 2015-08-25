@@ -1,4 +1,4 @@
-# Usage []({{ site.repo }}/blob/master/docs/_includes/getting-started/usage.md)
+# Usage []({{ site.repo }}/blob/master/docs/_includess/getting-started/usage.md)
 
 ---
 

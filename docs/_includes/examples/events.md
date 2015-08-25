@@ -1,4 +1,4 @@
-# Events []({{ site.repo }}/blob/master/docs/_includes/examples/events.md)
+# Events []({{ site.repo }}/blob/master/docs/_includess/examples/events.md)
 
 <div id="eventsGs1"
      data-toggle="group-select"
