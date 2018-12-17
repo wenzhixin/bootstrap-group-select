@@ -14,14 +14,14 @@
 </title>
 
 <!-- Bootstrap CSS -->
-<link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="../assets/bootstrap-table/bootstrap-table.css" rel="stylesheet">
-<link href="../assets/css/sidenav.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="https://unpkg.com/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet">
 <link href="../assets/css/docs.min.css" rel="stylesheet">
-<link href="../assets/css/style.css" rel="stylesheet">
+<link href="../assets/css/sidenav.css?v={{ site.current_version }}" rel="stylesheet">
+<link href="../assets/css/style.css?v={{ site.current_version }}" rel="stylesheet">
+<link href="../assets/css/ads.css" rel="stylesheet">
 
-<script src="../assets/js/jquery.min.js"></script>
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 <script src="../assets/js/ie-emulation-modes-warning.js"></script>
 
@@ -42,6 +42,11 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-36708951-1', 'wenzhixin.net.cn');
   ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+  if (window!=top) // 判断当前的window对象是否是top对象
+    top.location.href = window.location.href; // 如果不是，将top对象的网址自动导向被嵌入网页的网址
 </script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

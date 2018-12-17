@@ -1,20 +1,96 @@
 .bs-docs-featurette .row {
-    text-align: left;
+  text-align: left;
 }
-.bs-docs-nav + p {
-    margin-bottom: 0;
+
+.bs-docs-nav+p {
+  margin-bottom: 0;
 }
+
+.bs-docs-header {
+  padding: 10px 0 0;
+}
+
+.bs-docs-header .col-md-8 {
+  padding: 0 0 20px;
+}
+
+.bs-docs-header h1 {
+  margin-top: 20px;
+  margin-right: 0;
+}
+
+.bs-docs-header div {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bs-docs-header a {
+  color: #fff;
+}
+
 .edit-page-link {
-    float: right;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 39px;
+  float: right;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 39px;
 }
+
 .examples-parent {
-    position: relative;
+  position: relative;
 }
+
 .examples-button {
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.language {
+  padding: 8px 0;
+}
+
+.github-btn {
+  vertical-align: middle;
+}
+
+.btn-count {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  background-color: #fafafa;
+  border: 1px solid #d4d4d4;
+  padding: 2px 5px 2px 4px;
+  color: #333;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+
+.btn-count:after,
+.btn-count:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.btn-count:before {
+  top: 50%;
+  left: -3px;
+  margin-top: -4px;
+  border-width: 4px 4px 4px 0;
+  border-right-color: #fafafa;
+}
+
+.btn-count:after {
+  top: 50%;
+  left: -4px;
+  z-index: -1;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #d4d4d4;
 }

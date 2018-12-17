@@ -1,0 +1,24 @@
+{
+  "name": "bootstrap-group-select",
+  "version": "1.0.1",
+  "description": "An extended Bootstrap Group Select with dropdown and group buttons features.",
+  "main": "src/bootstrap-group-select.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenzhixin/bootstrap-group-select.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "group",
+    "select"
+  ],
+  "author": "wenzhixin2010@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenzhixin/bootstrap-group-select/issues"
+  },
+  "homepage": "https://github.com/wenzhixin/bootstrap-group-select#readme"
+}

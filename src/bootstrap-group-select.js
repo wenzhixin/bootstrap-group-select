@@ -4,7 +4,7 @@
  * version: 1.0.1
  */
 
-!function ($) {
+(function ($) {
 
     'use strict';
 
@@ -156,7 +156,7 @@
 
         $.each(data, function (i, value) {
             // add separator and header options
-            var data = value.split('|');
+            var data = typeof value === 'string' ? value.split('|') : value;
             if (data.length > 1) {
                 switch(data[1].toLowerCase()) {
                     case 'divider':
@@ -291,4 +291,4 @@
         $('[data-toggle="group-select"]').groupSelect();
     });
 
-}(window.jQuery);
+})(window.jQuery);

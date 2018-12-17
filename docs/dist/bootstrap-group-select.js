@@ -1,10 +1,10 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-group-select
- * version: 1.0.0
+ * version: 1.0.1
  */
 
-!function ($) {
+(function ($) {
 
     'use strict';
 
@@ -71,7 +71,7 @@
     };
 
     GroupSelect.DEFAULTS = {
-        type: 'button', // button, dropdown
+        type: 'dropdown', // button, dropdown
         value: undefined,
         data: [],
         defaultClass: 'btn btn-default',
@@ -147,7 +147,7 @@
             html = [];
 
         html.push(sprintf('<button class="%s dropdown-toggle" type="button" data-toggle="dropdown">',
-            that.options.value ? that.options.primaryClass : that.options.defaultClass),
+                that.options.defaultClass),
             sprintf('<span class="value">%s</span> <span class="caret"></span>',
                 calculateObjectValue(that.options, that.options.formatter,
                 [this.options.value], this.options.value)),
@@ -155,9 +155,24 @@
             '<ul class="dropdown-menu" role="menu">');
 
         $.each(data, function (i, value) {
-            html.push(sprintf('<li data-value="%s" class="%s"><a href="javascript:void(0)">%s</a></li>',
-                value, that.options.value === value ? 'active' : '',
-                calculateObjectValue(that.options, that.options.formatter, [value], value)));
+            // add separator and header options
+            var data = typeof value === 'string' ? value.split('|') : value;
+            if (data.length > 1) {
+                switch(data[1].toLowerCase()) {
+                    case 'divider':
+                        html.push('<li role="separator" class="divider"></li>');
+                        break;
+                    case 'header':
+                        html.push(sprintf('<li class="dropdown-header">%s</li>', data[0]));
+                        break;
+                }
+            }
+            else {
+                value = data[0];
+                html.push(sprintf('<li data-value="%s" class="%s"><a href="javascript:void(0)">%s</a></li>',
+                    value, that.options.value === value ? 'active' : '',
+                    calculateObjectValue(that.options, that.options.formatter, [value], value)));
+            }
         });
 
         html.push('</ul>');
@@ -165,9 +180,6 @@
 
         this.$el.find('li').off('click').on('click', function () {
             that.options.value = $(this).data('value');
-
-            that.$el.find('button.dropdown-toggle').attr('class', sprintf('%s dropdown-toggle',
-                that.options.value ? that.options.primaryClass : that.options.defaultClass));
 
             that.$el.find('.value').html(calculateObjectValue(that.options,
                 that.options.formatter, [that.options.value], that.options.value));
@@ -279,4 +291,4 @@
         $('[data-toggle="group-select"]').groupSelect();
     });
 
-}(window.jQuery);
+})(window.jQuery);

@@ -3,5 +3,4 @@ node_modules
 # docs site
 _gh_pages
 
-# deploy the docs
-deploy.sh
+Gemfile.lock
