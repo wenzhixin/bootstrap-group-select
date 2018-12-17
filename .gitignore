@@ -1,0 +1,6 @@
+node_modules
+
+# docs site
+_gh_pages
+
+Gemfile.lock
